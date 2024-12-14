@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Vector2 move = inputs.Default.Move.ReadValue<Vector2>();
-        rb.velocity = transform.right * move.x * speed + transform.forward * move.y * speed + transform.up * rb.velocity.y;
+        rb.linearVelocity = transform.right * move.x * speed + transform.forward * move.y * speed + transform.up * rb.linearVelocity.y;
 
         float x = inputs.Default.Look.ReadValue<Vector2>().x;
         transform.Rotate(Vector3.up * x * sens * Time.deltaTime);

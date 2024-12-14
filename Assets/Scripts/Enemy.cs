@@ -43,10 +43,7 @@ public class Enemy : MonoBehaviour
         {
             Vector3 move = Vector3.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
 
-            if (distance <= 10)
-            {
-                Vector3.MoveTowards(transform.position, player.transform.position, speed * 2 * Time.deltaTime);
-            }
+            if (distance <= 10) { Vector3.MoveTowards(transform.position, player.transform.position, speed * 2 * Time.deltaTime); }
             
             transform.position = new Vector3(move.x, transform.position.y, move.z);
         }
